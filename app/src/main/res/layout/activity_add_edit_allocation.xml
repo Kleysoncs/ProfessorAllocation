@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.allocation.AddEditAllocationActivity">
+
+    <Spinner
+        android:id="@+id/spinner_professor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_course"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_professor"
+        app:layout_constraintStart_toStartOf="@+id/spinner_professor"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_professor" />
+
+    <EditText
+        android:id="@+id/start_hour_allocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Start"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_day"
+        app:layout_constraintStart_toStartOf="@+id/spinner_day"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_day" />
+
+    <EditText
+        android:id="@+id/end_hour_allocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="End"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@+id/start_hour_allocation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/start_hour_allocation"
+        app:layout_constraintTop_toBottomOf="@+id/start_hour_allocation" />
+
+    <Button
+        android:id="@+id/button_save_allocation"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/purple_700"
+        android:gravity="center"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/end_hour_allocation"
+        app:layout_constraintStart_toStartOf="@+id/end_hour_allocation"
+        app:layout_constraintTop_toBottomOf="@+id/end_hour_allocation"
+        app:rippleColor="#A1A1A1" />
+
+    <Spinner
+        android:id="@+id/spinner_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_course"
+        app:layout_constraintStart_toStartOf="@+id/spinner_course"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_course" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/allocation_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        app:cardCornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#74C5CAE9"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_calendar_month_24" />
+
+            <TextView
+                android:id="@+id/professor_name_allocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/button_edit_allocation"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Professor" />
+
+            <TextView
+                android:id="@+id/department_name_allocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/professor_cpf_allocation"
+                app:layout_constraintStart_toStartOf="@+id/professor_cpf_allocation"
+                app:layout_constraintTop_toBottomOf="@+id/professor_cpf_allocation"
+                tools:text="Department" />
+
+            <TextView
+                android:id="@+id/professor_cpf_allocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/professor_name_allocation"
+                app:layout_constraintStart_toStartOf="@+id/professor_name_allocation"
+                app:layout_constraintTop_toBottomOf="@+id/professor_name_allocation"
+                tools:text="CPF" />
+
+            <TextView
+                android:id="@+id/course_name_allocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/department_name_allocation"
+                app:layout_constraintStart_toStartOf="@+id/department_name_allocation"
+                app:layout_constraintTop_toBottomOf="@+id/department_name_allocation"
+                tools:text="Course" />
+
+            <Button
+                android:id="@+id/button_edit_allocation"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="41dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:iconTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/button_delete_allocation"
+                app:layout_constraintEnd_toStartOf="@+id/button_delete_allocation"
+                app:layout_constraintTop_toTopOf="@+id/button_delete_allocation"
+                app:rippleColor="#A1A1A1" />
+
+            <Button
+                android:id="@+id/button_delete_allocation"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="41dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                app:icon="@drawable/ic_baseline_delete_24"
+                app:iconTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="#A1A1A1" />
+
+            <TextView
+                android:id="@+id/day_week_allocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="@+id/course_name_allocation"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/course_name_allocation"
+                app:layout_constraintTop_toBottomOf="@+id/course_name_allocation"
+                tools:text="Day of week"/>
+
+            <TextView
+                android:id="@+id/start_time_allocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time"
+                app:layout_constraintEnd_toEndOf="@+id/day_week_allocation"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/day_week_allocation"
+                app:layout_constraintTop_toBottomOf="@+id/day_week_allocation"
+                tools:text="Start hour"/>
+
+            <TextView
+                android:id="@+id/end_time_allocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/start_time_allocation"
+                app:layout_constraintStart_toStartOf="@+id/start_time_allocation"
+                app:layout_constraintTop_toBottomOf="@+id/start_time_allocation"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="End hour"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
